@@ -1,0 +1,14 @@
+{%- comment -%}
+Lista de clases o assignments de un curso, ordenada por numero.
+Parámetros: docs (documentos ya filtrados por curso), etiqueta ("Clase" o "Assignment").
+{%- endcomment -%}
+{% assign items = include.docs | sort: "numero", "last" %}
+<ul class="lista-items">
+  {% for item in items %}
+    <li>
+      <span class="etiqueta">{{ include.etiqueta }} {{ item.numero }}</span>
+      <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+      {% if item.resumen %}<span class="resumen">{{ item.resumen }}</span>{% endif %}
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,9 @@
+---
+layout: default
+---
+{% capture links %}Enunciado|{{ page.enunciado }};Código|{{ page.repo }}{% endcapture %}
+{% include cabecera-entrada.html etiqueta="Assignment" links=links %}
+
+{{ content }}
+
+{% include navegacion-entrada.html docs=site.assignments etiqueta="Assignment" %}

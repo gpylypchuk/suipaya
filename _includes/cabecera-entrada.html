@@ -1,0 +1,14 @@
+{%- comment -%}
+Cabecera de una clase o un assignment: vuelta al curso, etiqueta, título, links y fecha.
+Parámetros: etiqueta ("Clase" o "Assignment") y links (lista de pares "texto|url" separados por ";").
+{%- endcomment -%}
+{% assign curso = site.cursos | where: "slug", page.curso | first %}
+{% if curso %}
+<p class="volver sans"><a href="{{ curso.url | prepend: site.baseurl }}">&larr; {{ curso.title }}</a></p>
+{% endif %}
+<p class="etiqueta">{{ include.etiqueta }} {{ page.numero }}</p>
+<h1 class="titulo-entrada">{{ page.title }}</h1>
+{% assign links = include.links | split: ";" %}
+{% capture enlaces %}{% for par in links %}{% assign partes = par | split: "|" %}{% if partes[1] and partes[1] != "" %}<a href="{{ partes[1] }}">{{ partes[0] }}</a>{% endif %}{% endfor %}{% endcapture %}
+{% if enlaces != "" %}<p class="enlaces sans">{{ enlaces }}</p>{% endif %}
+{% if page.fecha %}<p class="subtitle">{% include fecha.html fecha=page.fecha %}</p>{% endif %}

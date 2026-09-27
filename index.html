@@ -6,7 +6,7 @@ layout: default
 <p>Este es el sitio de Geronimo Pylypchuk.</p>
 
 {% if site.cursos %}
-{% assign cursos = site.cursos | sort: "orden" %}
+{% assign cursos = site.cursos | sort: "orden", "last" %}
 <ul class="lista-cursos">
   {% for curso in cursos %}
     <li>

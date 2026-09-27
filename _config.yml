@@ -10,3 +10,32 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 timezone: America/Argentina/Buenos_Aires
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 exclude: ['Gemfile', 'Gemfile.lock', 'README.md', 'ROADMAP.md']
+
+# Cursos en /cs149/; clases y assignments en /cs149/clase01/, según la ruta del archivo
+collections:
+  cursos:
+    output: true
+    permalink: /:name/
+  clases:
+    output: true
+    permalink: /:path/
+  assignments:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: cursos
+    values:
+      layout: curso
+  - scope:
+      path: ""
+      type: clases
+    values:
+      layout: clase
+  - scope:
+      path: ""
+      type: assignments
+    values:
+      layout: assignment

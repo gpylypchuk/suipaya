@@ -515,8 +515,46 @@ a.titulo-curso { font-size: 1.8rem;
                  line-height: 1.2;
                  color: $contrast-color; }
 
+// Páginas de cursos, clases y assignments
+
+.etiqueta { font-family: $sans-font;
+            font-size: 1rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase; }
+
+p.etiqueta { margin-bottom: 0; }
+
+h1.titulo-entrada { margin-top: 0.5rem; }
+
+p.volver, p.enlaces { font-size: 1.1rem;
+                      letter-spacing: 0.05em; }
+
+p.enlaces a + a { margin-left: 1.5rem; }
+
+ul.lista-items { width: 55%;
+                 padding-left: 0;
+                 -webkit-padding-start: 0; }
+
+ul.lista-items li { margin-top: 1.4rem;
+                    padding-right: 0; }
+
+ul.lista-items li .etiqueta { display: block;
+                              line-height: 1.4rem; }
+
+ul.lista-items li .resumen { display: block; }
+
+nav.navegacion-entrada { width: 55%;
+                         display: flex;
+                         justify-content: space-between;
+                         gap: 2rem;
+                         margin-top: 3rem;
+                         font-size: 1.1rem; }
+
+nav.navegacion-entrada span:last-child { text-align: right; }
+
 @media screen and (max-width: 760px) { h1.titulo-sitio { font-size: 3rem; }
-                                       ul.lista-cursos { width: 90%; } }
+                                       ul.lista-cursos { width: 90%; }
+                                       ul.lista-items, nav.navegacion-entrada { width: 90%; } }
 
 
 // Printing ands screen media queries

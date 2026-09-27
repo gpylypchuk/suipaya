@@ -1,0 +1,15 @@
+{%- comment -%}
+Navegación anterior y siguiente dentro del mismo curso, ordenada por numero.
+Parámetros: docs (site.clases o site.assignments) y etiqueta ("Clase" o "Assignment").
+{%- endcomment -%}
+{% assign hermanos = include.docs | where: "curso", page.curso | sort: "numero", "last" %}
+{% for h in hermanos %}{% if h.url == page.url %}{% assign actual = forloop.index0 %}{% endif %}{% endfor %}
+{% assign anterior = nil %}
+{% if actual > 0 %}{% assign i = actual | minus: 1 %}{% assign anterior = hermanos[i] %}{% endif %}
+{% assign i = actual | plus: 1 %}{% assign siguiente = hermanos[i] %}
+{% if anterior or siguiente %}
+<nav class="navegacion-entrada sans">
+  <span>{% if anterior %}<a href="{{ anterior.url | prepend: site.baseurl }}">&larr; {{ include.etiqueta }} {{ anterior.numero }}. {{ anterior.title }}</a>{% endif %}</span>
+  <span>{% if siguiente %}<a href="{{ siguiente.url | prepend: site.baseurl }}">{{ include.etiqueta }} {{ siguiente.numero }}. {{ siguiente.title }} &rarr;</a>{% endif %}</span>
+</nav>
+{% endif %}

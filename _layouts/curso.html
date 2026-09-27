@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+{% assign datos = "" | split: "" %}
+{% if page.institucion %}{% assign datos = datos | push: page.institucion %}{% endif %}
+{% if page.periodo %}{% assign datos = datos | push: page.periodo %}{% endif %}
+{% if datos.size > 0 %}<p class="subtitle">{{ datos | join: " · " }}</p>{% endif %}
+
+{% if page.descripcion %}<p class="justificado">{{ page.descripcion }}</p>{% endif %}
+{% if page.sitio %}<p><a href="{{ page.sitio }}">Sitio oficial del curso</a></p>{% endif %}
+
+{{ content }}
+
+{% assign clases = site.clases | where: "curso", page.slug %}
+{% if clases.size > 0 %}
+<h2>Clases</h2>
+{% include lista-curso.html docs=clases etiqueta="Clase" %}
+{% endif %}
+
+{% assign assignments = site.assignments | where: "curso", page.slug %}
+{% if assignments.size > 0 %}
+<h2>Assignments</h2>
+{% include lista-curso.html docs=assignments etiqueta="Assignment" %}
+{% endif %}

@@ -83,9 +83,11 @@ Terminado cuando la portada se parece a la referencia en escritorio y en celular
 ## Fase 4. Cursos, clases y assignments
 Tres colecciones con output activado.
 _cursos, un archivo por curso con los campos title (se llama así para que el tema lo use
-en el head), descripcion, institucion, periodo, orden, slug y sitio (link a la página
-oficial). Cada curso queda en /slug/, por ejemplo /cs149/.
-_clases, una subcarpeta por curso y un archivo por clase con los campos curso, numero,
+en el head), descripcion, institucion, periodo, orden y sitio (link a la página oficial). El slug
+sale del nombre del archivo (cs149.md se identifica como cs149), no hay campo slug.
+Cada curso queda en /slug/, por ejemplo /cs149/.
+_clases, una subcarpeta por curso y un archivo por clase con los campos curso (el slug
+del curso al que pertenece), numero,
 title, resumen de una línea, slides y video (links a los originales) y fecha opcional
 (cuándo lo escribí). El permalink sale de la ruta del archivo, así
 _clases/cs149/clase01.md queda en /cs149/clase01/.
