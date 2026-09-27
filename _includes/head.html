@@ -4,7 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {%- if page.resumen %}{% assign descripcion = page.resumen %}
+  {%- elsif page.descripcion %}{% assign descripcion = page.descripcion %}
+  {%- elsif page.excerpt %}{% assign descripcion = page.excerpt | strip_html | normalize_whitespace | truncate: 160 %}
+  {%- else %}{% assign descripcion = site.description %}{% endif %}
+  <meta name="description" content="{{ descripcion | strip | escape }}">
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
   {% if site.data.options.lato_font_load %}
