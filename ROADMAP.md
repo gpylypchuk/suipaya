@@ -108,9 +108,10 @@ Terminado cuando se puede navegar portada, curso, clase, siguiente clase y volve
 Creá dos cursos. CS149 Parallel Computing (Stanford, Fall 2023, orden 1) y Digital Design
 and Computer Architecture (ETH Zürich, Onur Mutlu, período a definir, orden 2), con
 descripciones placeholder. Para CS149 creá dos clases y un assignment de ejemplo con texto
-placeholder que usen sidenote, marginnote, una figura al margen, una ecuación, un bloque de
-código y una tabla de resultados. Documentá en el README cómo agregar un curso, una clase y
-un assignment, con un ejemplo de front matter de cada uno, la sintaxis de cada tag del tema
+placeholder que usen sidenote, marginnote, una figura al margen, una ecuación en línea y otra centrada escritas con $$ (sintaxis
+nativa de kramdown, sin los tags m y math), un bloque de código y una tabla de resultados. Documentá en el README cómo agregar un curso, una clase y
+un assignment, con un ejemplo de front matter de cada uno, la sintaxis de cada tag del tema, cómo escribir ecuaciones con $$ (dentro de un párrafo
+para fórmulas en línea, en su propio párrafo para ecuaciones centradas)
 y el aviso de que cada sidenote necesita un id único por página y de que un apóstrofe
 dentro de una nota entre comillas simples la rompe.
 Terminado cuando las páginas de ejemplo muestran cada elemento correctamente.
