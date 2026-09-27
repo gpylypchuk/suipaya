@@ -122,6 +122,11 @@ Terminado cuando las páginas de ejemplo muestran cada elemento correctamente.
 Creá .github/workflows/pages.yml basado en el starter oficial de Jekyll para GitHub Pages
 (setup de Ruby con cache de bundler, build con bundle exec jekyll build usando el baseurl
 que devuelve configure pages, upload del artefacto y deploy). Que corra en cada push a main.
+Agregados: correr bundle lock --add-platform x86_64-linux y commitear el Gemfile.lock (se
+generó en macOS arm64 y Actions corre en Linux; sin esto bundler falla en modo congelado
+por gems nativas como sass-embedded). El workflow toma la versión de Ruby de
+.ruby-version, usa cache de bundler, buildea con JEKYLL_ENV=production y corre en cada
+push a main y también manualmente desde la pestaña Actions.
 Terminado cuando el workflow queda commiteado; yo activo Pages y hago el push.
 
 ## Fase 7. Verificación

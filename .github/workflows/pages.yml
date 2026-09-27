@@ -1,0 +1,59 @@
+# Build y deploy del sitio a GitHub Pages.
+# Basado en el starter oficial de Jekyll para Pages (actions/starter-workflows, pages/jekyll.yml).
+# Se usa Actions en lugar del build clásico de Pages porque este no ejecuta los plugins de _plugins.
+name: Deploy a GitHub Pages
+
+on:
+  # En cada push a main
+  push:
+    branches: ["main"]
+
+  # Manualmente desde la pestaña Actions
+  workflow_dispatch:
+
+# Permisos del GITHUB_TOKEN para poder deployar a Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un solo deploy a la vez; los que quedan en cola se saltean, el que está corriendo termina
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
+        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
+        with:
+          ruby-version: .ruby-version # la misma versión que en local
+          bundler-cache: true # corre bundle install y cachea las gems
+          cache-version: 0 # incrementar para forzar a bajar las gems de nuevo
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build con Jekyll
+        # Genera ./_site con el baseurl que corresponde al repo
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+      - name: Upload del artefacto
+        # Sube ./_site
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy a GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
