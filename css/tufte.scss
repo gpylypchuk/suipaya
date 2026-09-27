@@ -491,6 +491,33 @@ hr.slender {
 }
 // End of front listing page stuff
 
+// Portada: título del sitio y lista de cursos
+
+h1.titulo-sitio { font-size: 4rem;
+                  line-height: 1;
+                  text-transform: lowercase;
+                  margin-bottom: 0; }
+
+ul.lista-cursos { width: 55%;
+                  list-style-type: disc;
+                  padding-left: 1.5rem;
+                  -webkit-padding-start: 1.5rem;
+                  -webkit-padding-end: 0; }
+
+ul.lista-cursos li { margin-top: 2rem;
+                     padding-right: 0; }
+
+ul.lista-cursos li p { width: 100%;
+                       margin-top: 0.5rem;
+                       padding-right: 0; }
+
+a.titulo-curso { font-size: 1.8rem;
+                 line-height: 1.2;
+                 color: $contrast-color; }
+
+@media screen and (max-width: 760px) { h1.titulo-sitio { font-size: 3rem; }
+                                       ul.lista-cursos { width: 90%; } }
+
 
 // Printing ands screen media queries
 
