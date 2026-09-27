@@ -69,6 +69,26 @@ fecha: 2023-09-12
 - `fecha` es cuándo escribí el resumen y se muestra como "12 de septiembre de 2023".
 - El orden en el curso y la navegación anterior/siguiente salen de `numero`.
 
+### Links internos y rutas de imágenes
+
+Vale igual para clases y assignments.
+
+- **Los links a otras páginas del sitio van siempre con el tag `link` apuntando al
+  archivo**, nunca con rutas escritas a mano:
+
+  ```markdown
+  Esto sigue en la [clase 2]({% link _clases/cs149/clase02.md %}).
+  ```
+
+  El tag agrega el baseurl solo (en Pages el sitio vive bajo `/suipaya/`) y rompe el
+  build con `Could not find document` si el archivo no existe, así que un link roto se
+  detecta antes de publicar.
+
+- **En los tags de figuras la ruta de la imagen va sin barra inicial**:
+  `assets/img/figura.svg`, no `/assets/img/figura.svg`. El plugin antepone el baseurl y
+  una barra; con barra inicial, en local queda `//assets/img/figura.svg`, que el
+  navegador interpreta como otro dominio y la imagen no carga.
+
 ## Agregar un assignment
 
 Crear `_assignments/<curso>/assignmentN.md`, con el número sin ceros: `assignment1.md`,
@@ -120,7 +140,7 @@ Todos los argumentos van entre comillas. El texto admite markdown en línea.
 {% marginnote 'mn-id' 'Texto de la nota.' %}
 ```
 
-**Figura al margen** (la ruta es relativa a la raíz del sitio):
+**Figura al margen** (la ruta es relativa a la raíz del sitio, sin barra inicial):
 
 ```liquid
 {% marginfigure 'mf-id' 'assets/img/figura.png' 'Epígrafe de la figura.' %}
