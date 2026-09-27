@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="260" viewBox="0 0 400 260">
+  <rect width="400" height="260" fill="#fffff8" stroke="#333333" stroke-width="2"/>
+  <line x1="0" y1="0" x2="400" y2="260" stroke="#cccccc" stroke-width="2"/>
+  <line x1="400" y1="0" x2="0" y2="260" stroke="#cccccc" stroke-width="2"/>
+  <text x="200" y="138" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#a00000">figura de ejemplo</text>
+</svg>

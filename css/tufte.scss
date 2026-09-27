@@ -306,7 +306,9 @@ blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
 p, footer, div.table-wrapper,  .MJXc-display, .MathJax { width: 55%; }
 
 // Ecuaciones centradas de MathJax 3, alineadas con la columna de texto
-mjx-container[display="true"] { width: 55%; }
+// MathJax pone font-size en línea sobre el contenedor; important para igualar a los párrafos
+mjx-container[display="true"] { width: 55%;
+                                font-size: 1.4rem !important; }
 
 div.table-wrapper, table { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
