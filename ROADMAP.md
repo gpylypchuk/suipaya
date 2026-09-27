@@ -52,14 +52,14 @@ _data/
     social.yml
 .github/workflows/pages.yml
 
-## Fase 1. Base del tema
+## Fase 1. Base del tema (completa)
 Copiá el contenido de github.com/clayh53/tufte-jekyll a este repo sin su carpeta .git.
 Conservá LICENSE. Borrá los posts de ejemplo, _drafts, los Rakefiles, _page.txt, _post.txt,
 la página about de ejemplo, feed.xml y la imagen badge. Creá un Gemfile con jekyll 4.3 y
 rouge, y un .gitignore con _site, .jekyll-cache y .bundle.
 Terminado cuando el build compila sin errores y no queda contenido de ejemplo del tema.
 
-## Fase 2. Configuración y español
+## Fase 2. Configuración y español (completa)
 En _config.yml poné title suipaya, author Geronimo Pylypchuk, una description corta,
 baseurl vacío, url apuntando a gpylypchuk.github.io con https, lang es y timezone
 America/Argentina/Buenos_Aires. Sacá el permalink de articles y las claves de los Rakefiles
@@ -71,7 +71,7 @@ sacá el mailto de ejemplo y el ícono de RSS, y agregá la línea "Tema basado 
 de Clay Harmon".
 Terminado cuando no queda ningún texto en inglés en la interfaz.
 
-## Fase 3. Header y portada
+## Fase 3. Header y portada (completa)
 Header fijo con el logo de texto <SUIPAYA> linkeado al inicio y el link SOBRE MÍ, con el
 estilo de la referencia visual. No iterar site.pages para el menú, dejarlo explícito.
 Portada con el título grande suipaya, la línea "Este es el sitio de Geronimo Pylypchuk." y
@@ -80,7 +80,7 @@ linkeado a su página, y su descripción debajo. Nada más, ni fechas ni clases.
 define el campo orden de cada curso. Página sobre.md simple con placeholder, en /sobre/.
 Terminado cuando la portada se parece a la referencia en escritorio y en celular.
 
-## Fase 4. Cursos, clases y assignments
+## Fase 4. Cursos, clases y assignments (completa)
 Tres colecciones con output activado.
 _cursos, un archivo por curso con los campos title (se llama así para que el tema lo use
 en el head), descripcion, institucion, periodo, orden y sitio (link a la página oficial). El slug
@@ -106,7 +106,7 @@ Layout assignment, igual que clase pero con la etiqueta "Assignment N" y links a
 y repo en lugar de slides y video.
 Terminado cuando se puede navegar portada, curso, clase, siguiente clase y volver.
 
-## Fase 5. Contenido inicial
+## Fase 5. Contenido inicial (completa)
 Creá dos cursos. CS149 Parallel Computing (Stanford, Fall 2023, orden 1) y Digital Design
 and Computer Architecture (ETH Zürich, Onur Mutlu, período a definir, orden 2), con
 descripciones placeholder. Para CS149 creá dos clases y un assignment de ejemplo con texto
@@ -118,7 +118,7 @@ y el aviso de que cada sidenote necesita un id único por página y de que un ap
 dentro de una nota entre comillas simples la rompe.
 Terminado cuando las páginas de ejemplo muestran cada elemento correctamente.
 
-## Fase 6. Deploy
+## Fase 6. Deploy (completa)
 Creá .github/workflows/pages.yml basado en el starter oficial de Jekyll para GitHub Pages
 (setup de Ruby con cache de bundler, build con bundle exec jekyll build usando el baseurl
 que devuelve configure pages, upload del artefacto y deploy). Que corra en cada push a main.
@@ -129,7 +129,7 @@ por gems nativas como sass-embedded). El workflow toma la versión de Ruby de
 push a main y también manualmente desde la pestaña Actions.
 Terminado cuando el workflow queda commiteado; yo activo Pages y hago el push.
 
-## Fase 7. Verificación
+## Fase 7. Verificación (completa)
 Levantá el sitio con bundle exec jekyll serve y revisá
 1. Que no haya links rotos entre portada, cursos, clases y assignments.
 2. Que las sidenotes aparezcan en el margen en escritorio y se desplieguen al tocar el
