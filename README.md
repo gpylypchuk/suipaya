@@ -1,6 +1,6 @@
 # suipaya
 
-Sitio personal de Geronimo Pylypchuk con resúmenes de cursos, en
+Sitio personal de Geronimo Pylypchuk con resúmenes de cursos y notas de proyectos, en
 [Suipaya](https://gpylypchuk.github.io/suipaya). Está hecho con Jekyll 4.3 y el
 tema [tufte-jekyll](https://github.com/clayh53/tufte-jekyll) de Clay Harmon (licencia
 MIT, ver `LICENSE`).
@@ -22,6 +22,8 @@ El sitio queda en http://127.0.0.1:4000.
 _cursos/cs149.md                    →  /cs149/
 _clases/cs149/clase01.md            →  /cs149/clase01/
 _assignments/cs149/assignment1.md   →  /cs149/assignment1/
+_proyectos/polysome.md              →  /proyectos/polysome/
+_notas/polysome/nota01.md           →  /proyectos/polysome/nota01/
 ```
 
 Cada colección tiene su layout asignado en `_config.yml`, así que los archivos no
@@ -71,7 +73,7 @@ fecha: 2023-09-12
 
 ### Links internos y rutas de imágenes
 
-Vale igual para clases y assignments.
+Vale igual para clases, assignments y notas.
 
 - **Los links a otras páginas del sitio van siempre con el tag `link` apuntando al
   archivo**, nunca con rutas escritas a mano:
@@ -109,12 +111,64 @@ fecha: 2023-10-01
 `enunciado`, `repo` y `fecha` son opcionales. Si un curso no tiene assignments, la
 sección no aparece en su página.
 
+## Agregar un proyecto
+
+Crear `_proyectos/<nombre>.md`. El nombre del archivo, sin extensión, es el identificador
+del proyecto y define su URL: `polysome.md` queda en `/proyectos/polysome/`. Usar
+minúsculas, sin espacios.
+
+```yaml
+---
+title: Polysome
+descripcion: Un párrafo corto que aparece en la portada y en la página del proyecto.
+repo: https://github.com/gpylypchuk/polysome
+estado: En curso, hito M00
+orden: 1
+---
+```
+
+- `orden` define la posición en la sección "Proyectos" de la portada. Un proyecto sin
+  `orden` va al final. Si no hay ningún proyecto, la sección no aparece.
+- `repo` y `estado` son opcionales; si faltan, no se muestran.
+- El cuerpo del archivo es opcional y aparece después de la descripción. La lista de
+  notas la agrega el layout al final.
+
+## Agregar una nota
+
+Crear `_notas/<proyecto>/notaNN.md`, con el número en dos dígitos: `nota01.md`,
+`nota02.md`, …, `nota12.md`. La URL queda en `/proyectos/<proyecto>/notaNN/`.
+
+```yaml
+---
+proyecto: polysome
+numero: 1
+title: Título de la nota
+resumen: Una línea que aparece en la lista de notas del proyecto.
+fecha: 2026-10-10
+---
+```
+
+- `fecha` es opcional y se muestra igual que en las clases.
+- El orden en el proyecto y la navegación anterior/siguiente salen de `numero`.
+- Las figuras de un proyecto van en `assets/img/proyectos/<proyecto>/`. Si una figura
+  sale de un script, el script va en `_scripts/` (Jekyll lo ignora) y se corre sin
+  agregar dependencias al sitio, por ejemplo
+  `uv run --with matplotlib python _scripts/relu_gelu.py`.
+
 ## Cuidado con el campo `curso`
 
 El campo `curso` de cada clase y assignment tiene que coincidir exactamente con el nombre
 del archivo del curso, sin extensión y en minúsculas: `curso: cs149` para
 `_cursos/cs149.md`. La comparación es de texto exacto. Si no coincide (`CS149`, `cs-149`,
 un espacio de más), la clase no aparece en el curso, no tiene link de vuelta ni
+navegación, y el build no da ningún error.
+
+## Cuidado con el campo `proyecto`
+
+Pasa lo mismo con las notas. El campo `proyecto` de cada nota tiene que coincidir
+exactamente con el nombre del archivo del proyecto, sin extensión y en minúsculas:
+`proyecto: polysome` para `_proyectos/polysome.md`. Si no coincide (`Polysome`, un
+espacio de más), la nota no aparece en el proyecto, no tiene link de vuelta ni
 navegación, y el build no da ningún error.
 
 ## Nombres de archivo y URLs

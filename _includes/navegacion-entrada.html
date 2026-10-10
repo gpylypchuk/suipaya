@@ -1,8 +1,10 @@
 {%- comment -%}
-Navegación anterior y siguiente dentro del mismo curso, ordenada por numero.
-Parámetros: docs (site.clases o site.assignments) y etiqueta ("Clase" o "Assignment").
+Navegación anterior y siguiente dentro del mismo curso o proyecto, ordenada por numero.
+Parámetros: docs (site.clases, site.assignments o site.notas) y etiqueta ("Clase", "Assignment" o "Nota").
+Opcional para notas: campo ("proyecto"). Por defecto "curso".
 {%- endcomment -%}
-{% assign hermanos = include.docs | where: "curso", page.curso | sort: "numero", "last" %}
+{% assign campo = include.campo | default: "curso" %}
+{% assign hermanos = include.docs | where: campo, page[campo] | sort: "numero", "last" %}
 {% for h in hermanos %}{% if h.url == page.url %}{% assign actual = forloop.index0 %}{% endif %}{% endfor %}
 {% assign anterior = nil %}
 {% if actual > 0 %}{% assign i = actual | minus: 1 %}{% assign anterior = hermanos[i] %}{% endif %}

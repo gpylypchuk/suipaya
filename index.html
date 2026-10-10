@@ -16,3 +16,16 @@ layout: default
   {% endfor %}
 </ul>
 {% endif %}
+
+{% if site.proyectos.size > 0 %}
+{% assign proyectos = site.proyectos | sort: "orden", "last" %}
+<h2>Proyectos</h2>
+<ul class="lista-cursos">
+  {% for proyecto in proyectos %}
+    <li>
+      <a class="titulo-curso" href="{{ proyecto.url | prepend: site.baseurl }}">{{ proyecto.title }}</a>
+      <p class="justificado">{{ proyecto.descripcion }}</p>
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}

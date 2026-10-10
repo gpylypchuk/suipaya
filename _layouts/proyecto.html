@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+{% if page.estado %}<p class="subtitle">{{ page.estado }}</p>{% endif %}
+
+{% if page.descripcion %}<p class="justificado">{{ page.descripcion }}</p>{% endif %}
+{% if page.repo %}<p><a href="{{ page.repo }}">Repositorio del proyecto</a></p>{% endif %}
+
+{{ content }}
+
+{% assign notas = site.notas | where: "proyecto", page.slug %}
+{% if notas.size > 0 %}
+<h2>Notas</h2>
+{% include lista-curso.html docs=notas etiqueta="Nota" %}
+{% endif %}

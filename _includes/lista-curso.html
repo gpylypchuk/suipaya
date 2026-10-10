@@ -1,6 +1,6 @@
 {%- comment -%}
-Lista de clases o assignments de un curso, ordenada por numero.
-Parámetros: docs (documentos ya filtrados por curso), etiqueta ("Clase" o "Assignment").
+Lista de clases, assignments o notas de un curso o proyecto, ordenada por numero.
+Parámetros: docs (documentos ya filtrados por curso o proyecto), etiqueta ("Clase", "Assignment" o "Nota").
 {%- endcomment -%}
 {% assign items = include.docs | sort: "numero", "last" %}
 <ul class="lista-items">

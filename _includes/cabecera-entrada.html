@@ -1,10 +1,13 @@
 {%- comment -%}
-Cabecera de una clase o un assignment: vuelta al curso, etiqueta, título, links y fecha.
-Parámetros: etiqueta ("Clase" o "Assignment") y links (lista de pares "texto|url" separados por ";").
+Cabecera de una clase, un assignment o una nota: vuelta al curso o proyecto, etiqueta, título, links y fecha.
+Parámetros: etiqueta ("Clase", "Assignment" o "Nota") y links (lista de pares "texto|url" separados por ";").
+Opcionales para notas: padres (site.proyectos) y campo ("proyecto"). Por defecto site.cursos y "curso".
 {%- endcomment -%}
-{% assign curso = site.cursos | where: "slug", page.curso | first %}
-{% if curso %}
-<p class="volver sans"><a href="{{ curso.url | prepend: site.baseurl }}">&larr; {{ curso.title }}</a></p>
+{% assign padres = include.padres | default: site.cursos %}
+{% assign campo = include.campo | default: "curso" %}
+{% assign padre = padres | where: "slug", page[campo] | first %}
+{% if padre %}
+<p class="volver sans"><a href="{{ padre.url | prepend: site.baseurl }}">&larr; {{ padre.title }}</a></p>
 {% endif %}
 <p class="etiqueta">{{ include.etiqueta }} {{ page.numero }}</p>
 <h1 class="titulo-entrada">{{ page.title }}</h1>

@@ -11,7 +11,8 @@ timezone: America/Argentina/Buenos_Aires
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 exclude: ['Gemfile', 'Gemfile.lock', 'README.md', 'ROADMAP.md']
 
-# Cursos en /cs149/; clases y assignments en /cs149/clase01/, según la ruta del archivo
+# Cursos en /cs149/; clases y assignments en /cs149/clase01/, según la ruta del archivo.
+# Proyectos en /proyectos/polysome/; notas en /proyectos/polysome/nota01/
 collections:
   cursos:
     output: true
@@ -22,6 +23,12 @@ collections:
   assignments:
     output: true
     permalink: /:path/
+  proyectos:
+    output: true
+    permalink: /proyectos/:name/
+  notas:
+    output: true
+    permalink: /proyectos/:path/
 
 defaults:
   - scope:
@@ -39,3 +46,13 @@ defaults:
       type: assignments
     values:
       layout: assignment
+  - scope:
+      path: ""
+      type: proyectos
+    values:
+      layout: proyecto
+  - scope:
+      path: ""
+      type: notas
+    values:
+      layout: nota
