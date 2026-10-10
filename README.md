@@ -1,7 +1,7 @@
 # suipaya
 
 Sitio personal de Geronimo Pylypchuk con resúmenes de cursos, en
-[gpylypchuk.github.io](https://gpylypchuk.github.io). Está hecho con Jekyll 4.3 y el
+[Suipaya](https://gpylypchuk.github.io/suipaya). Está hecho con Jekyll 4.3 y el
 tema [tufte-jekyll](https://github.com/clayh53/tufte-jekyll) de Clay Harmon (licencia
 MIT, ver `LICENSE`).
 
