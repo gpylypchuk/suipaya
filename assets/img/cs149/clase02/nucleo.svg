@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="540" viewBox="0 0 680 540">
+<style>
+text { font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif; fill: #111; font-size: 18px; }
+.sm { font-size: 17px; fill: #737373; }
+.head { font-family: 'Gill Sans', 'Gill Sans MT', Lato, Calibri, sans-serif; font-size: 16px; letter-spacing: 0.15em; }
+.mono { font-family: Consolas, Menlo, 'Liberation Mono', Courier, monospace; font-size: 17px; }
+.inv { fill: #fffff8; }
+.acc { fill: #a00000; }
+.note { font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif; font-style: italic; font-size: 19px; fill: #a00000; }
+.big { font-size: 21px; }
+.c16 { font-size: 17px; }
+</style>
+<defs>
+<marker id="fl-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#a00000"/></marker>
+<marker id="fl-gris" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#737373"/></marker>
+<pattern id="rayado" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#737373" stroke-width="1.5"/></pattern>
+</defs>
+<rect x="8" y="30" width="664" height="448" rx="1.5" fill="none" stroke="#333" stroke-width="2"/>
+<text x="26" y="58" class="head">NÚCLEO</text>
+<rect x="370.5" y="46" width="160" height="36" rx="1.5" fill="#efefef" stroke="#333" stroke-width="1"/>
+<text x="450.5" y="70" text-anchor="middle">Caché L2</text>
+<rect x="370.5" y="90" width="160" height="36" rx="1.5" fill="#efefef" stroke="#333" stroke-width="1"/>
+<text x="450.5" y="114" text-anchor="middle">Caché L1</text>
+<rect x="246" y="140" width="409" height="24" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="450.5" y="157" class="c16" text-anchor="middle">selección de instrucciones</text>
+<rect x="246" y="176" width="64" height="48" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="278" y="196" class="c16" text-anchor="middle">Fetch/</text>
+<text x="278" y="215" class="c16" text-anchor="middle">Decode</text>
+<rect x="315" y="176" width="64" height="48" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="347" y="196" class="c16" text-anchor="middle">Fetch/</text>
+<text x="347" y="215" class="c16" text-anchor="middle">Decode</text>
+<rect x="384" y="176" width="64" height="48" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="416" y="196" class="c16" text-anchor="middle">Fetch/</text>
+<text x="416" y="215" class="c16" text-anchor="middle">Decode</text>
+<rect x="453" y="176" width="64" height="48" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="485" y="196" class="c16" text-anchor="middle">Fetch/</text>
+<text x="485" y="215" class="c16" text-anchor="middle">Decode</text>
+<rect x="522" y="176" width="64" height="48" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="554" y="196" class="c16" text-anchor="middle">Fetch/</text>
+<text x="554" y="215" class="c16" text-anchor="middle">Decode</text>
+<rect x="591" y="176" width="64" height="48" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="623" y="196" class="c16" text-anchor="middle">Fetch/</text>
+<text x="623" y="215" class="c16" text-anchor="middle">Decode</text>
+<path d="M238,176 Q234,176 234,184 L234,192 Q234,200 230,200 Q234,200 234,208 L234,216 Q234,224 238,224" fill="none" stroke="#a00000" stroke-width="1.2"/>
+<text x="224" y="196" class="note" text-anchor="end">superescalar:</text>
+<text x="224" y="218" class="note" text-anchor="end">6 Fetch/Decode</text>
+<rect x="40" y="256" width="44" height="44" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="62" y="284" text-anchor="middle">ALU</text>
+<rect x="92" y="256" width="44" height="44" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="114" y="284" text-anchor="middle">ALU</text>
+<rect x="144" y="256" width="44" height="44" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="166" y="284" text-anchor="middle">ALU</text>
+<rect x="196" y="256" width="44" height="44" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="218" y="284" text-anchor="middle">ALU</text>
+<text x="140" y="322" class="sm" text-anchor="middle">4 ALU escalares</text>
+<rect x="372" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="392" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="412" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="432" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="372" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="392" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="412" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="432" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<text x="412" y="322" class="sm" text-anchor="middle">mul/add</text>
+<rect x="472" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="492" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="512" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="532" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="472" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="492" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="512" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="532" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<text x="512" y="322" class="sm" text-anchor="middle">mul/add</text>
+<rect x="572" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="592" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="612" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="632" y="256" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="572" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="592" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="612" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<rect x="632" y="278" width="20" height="22" fill="none" stroke="#333" stroke-width="1"/>
+<text x="612" y="322" class="sm" text-anchor="middle">add</text>
+<path d="M372,332 Q372,337 382,337 L502,337 Q512,337 512,342 Q512,337 522,337 L642,337 Q652,337 652,332" fill="none" stroke="#a00000" stroke-width="1.2"/>
+<text x="512" y="364" class="note" text-anchor="middle">SIMD: 8 lanes por instrucción</text>
+<rect x="200" y="384" width="120" height="66" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="260" y="406" class="c16" text-anchor="middle">contexto 0</text>
+<rect x="214" y="416" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<rect x="262" y="416" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<rect x="214" y="426" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<rect x="262" y="426" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<rect x="214" y="436" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<rect x="262" y="436" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<rect x="336" y="384" width="120" height="66" rx="1.5" fill="none" stroke="#333" stroke-width="1"/>
+<text x="396" y="406" class="c16" text-anchor="middle">contexto 1</text>
+<rect x="350" y="416" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<rect x="398" y="416" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<rect x="350" y="426" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<rect x="398" y="426" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<rect x="350" y="436" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<rect x="398" y="436" width="44" height="7" fill="#efefef" stroke="#737373" stroke-width="0.75"/>
+<path d="M464,384 Q468,384 468,392 L468,409 Q468,417 472,417 Q468,417 468,425 L468,442 Q468,450 464,450" fill="none" stroke="#a00000" stroke-width="1.2"/>
+<text x="478" y="412" class="note">SMT: 2 threads</text>
+<text x="478" y="434" class="note">en el mismo núcleo</text>
+<path d="M8,488 Q8,494 20,494 L328,494 Q340,494 340,500 Q340,494 352,494 L660,494 Q672,494 672,488" fill="none" stroke="#a00000" stroke-width="1.2"/>
+<text x="340" y="526" class="note" text-anchor="middle">multi-core: este bloque × 6 en un i5-8400</text>
+</svg>

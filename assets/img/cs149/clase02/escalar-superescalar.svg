@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="290" viewBox="0 0 1100 290">
+<style>
+text { font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif; fill: #111; font-size: 18px; }
+.sm { font-size: 17px; fill: #737373; }
+.head { font-family: 'Gill Sans', 'Gill Sans MT', Lato, Calibri, sans-serif; font-size: 16px; letter-spacing: 0.15em; }
+.mono { font-family: Consolas, Menlo, 'Liberation Mono', Courier, monospace; font-size: 17px; }
+.inv { fill: #fffff8; }
+.acc { fill: #a00000; }
+.note { font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif; font-style: italic; font-size: 19px; fill: #a00000; }
+.big { font-size: 21px; }
+.c16 { font-size: 17px; }
+</style>
+<defs>
+<marker id="fl-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#a00000"/></marker>
+<marker id="fl-gris" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#737373"/></marker>
+<pattern id="rayado" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#737373" stroke-width="1.5"/></pattern>
+</defs>
+<text x="406" y="30" class="head" text-anchor="end">CICLO</text>
+<text x="444" y="30" class="sm" text-anchor="middle">1</text>
+<text x="520" y="30" class="sm" text-anchor="middle">2</text>
+<text x="596" y="30" class="sm" text-anchor="middle">3</text>
+<text x="672" y="30" class="sm" text-anchor="middle">4</text>
+<text x="748" y="30" class="sm" text-anchor="middle">5</text>
+<text x="110" y="72" class="head">PROGRAMA</text>
+<text x="110" y="114" class="mono acc">(1) a = x * 2</text>
+<text x="110" y="144" class="mono">(2) b = y + 3</text>
+<text x="110" y="174" class="mono">(3) c = z * 5</text>
+<text x="110" y="204" class="mono acc">(4) d = a + b</text>
+<text x="110" y="234" class="mono acc">(5) e = c * d</text>
+<text x="420" y="72" class="head">ESCALAR · UN SLOT</text>
+<text x="406" y="103" class="sm" text-anchor="end">slot 1</text>
+<rect x="420" y="84" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="444" y="104" class="mono inv" text-anchor="middle">(1)</text>
+<rect x="496.5" y="84.5" width="47" height="27" rx="1.5" fill="none" stroke="#111" stroke-width="1"/>
+<text x="520" y="104" class="mono" text-anchor="middle">(2)</text>
+<rect x="572.5" y="84.5" width="47" height="27" rx="1.5" fill="none" stroke="#111" stroke-width="1"/>
+<text x="596" y="104" class="mono" text-anchor="middle">(3)</text>
+<rect x="648" y="84" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="672" y="104" class="mono inv" text-anchor="middle">(4)</text>
+<rect x="724" y="84" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="748" y="104" class="mono inv" text-anchor="middle">(5)</text>
+<text x="820" y="98" class="big">IPC = 1</text>
+<text x="820" y="120" class="sm">5 instrucciones en 5 ciclos</text>
+<text x="420" y="164" class="head">SUPERESCALAR · TRES SLOTS</text>
+<text x="406" y="195" class="sm" text-anchor="end">slot 1</text>
+<rect x="420" y="176" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="444" y="196" class="mono inv" text-anchor="middle">(1)</text>
+<rect x="496" y="176" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="520" y="196" class="mono inv" text-anchor="middle">(4)</text>
+<rect x="572" y="176" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="596" y="196" class="mono inv" text-anchor="middle">(5)</text>
+<text x="406" y="235" class="sm" text-anchor="end">slot 2</text>
+<rect x="420.5" y="216.5" width="47" height="27" rx="1.5" fill="none" stroke="#111" stroke-width="1"/>
+<text x="444" y="236" class="mono" text-anchor="middle">(2)</text>
+<rect x="496" y="216" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="572" y="216" width="48" height="28" rx="1.5" fill="#efefef"/>
+<text x="406" y="275" class="sm" text-anchor="end">slot 3</text>
+<rect x="420.5" y="256.5" width="47" height="27" rx="1.5" fill="none" stroke="#111" stroke-width="1"/>
+<text x="444" y="276" class="mono" text-anchor="middle">(3)</text>
+<rect x="496" y="256" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="572" y="256" width="48" height="28" rx="1.5" fill="#efefef"/>
+<path d="M471,190 H495" stroke="#a00000" stroke-width="1.5" fill="none" marker-end="url(#fl-acc)"/>
+<path d="M547,190 H571" stroke="#a00000" stroke-width="1.5" fill="none" marker-end="url(#fl-acc)"/>
+<path d="M471,230 H480 V199 H495" stroke="#737373" stroke-width="1.2" fill="none" stroke-linejoin="round" marker-end="url(#fl-gris)"/>
+<path d="M471,270 H488 V250 H556 V199 H571" stroke="#737373" stroke-width="1.2" fill="none" stroke-linejoin="round" marker-end="url(#fl-gris)"/>
+<text x="820" y="232" class="big">IPC = 5/3 ≈ 1,67</text>
+<text x="820" y="254" class="sm">5 instrucciones en 3 ciclos</text>
+</svg>

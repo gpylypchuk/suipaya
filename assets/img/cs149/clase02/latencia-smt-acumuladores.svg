@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="512" viewBox="0 0 1100 512">
+<style>
+text { font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif; fill: #111; font-size: 18px; }
+.sm { font-size: 17px; fill: #737373; }
+.head { font-family: 'Gill Sans', 'Gill Sans MT', Lato, Calibri, sans-serif; font-size: 16px; letter-spacing: 0.15em; }
+.mono { font-family: Consolas, Menlo, 'Liberation Mono', Courier, monospace; font-size: 17px; }
+.inv { fill: #fffff8; }
+.acc { fill: #a00000; }
+.note { font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif; font-style: italic; font-size: 19px; fill: #a00000; }
+.big { font-size: 21px; }
+.c16 { font-size: 17px; }
+</style>
+<defs>
+<marker id="fl-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#a00000"/></marker>
+<marker id="fl-gris" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#737373"/></marker>
+<pattern id="rayado" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#737373" stroke-width="1.5"/></pattern>
+</defs>
+<text x="86" y="30" class="head" text-anchor="end">CICLO</text>
+<text x="124" y="30" class="sm" text-anchor="middle">1</text>
+<text x="200" y="30" class="sm" text-anchor="middle">2</text>
+<text x="276" y="30" class="sm" text-anchor="middle">3</text>
+<text x="352" y="30" class="sm" text-anchor="middle">4</text>
+<text x="428" y="30" class="sm" text-anchor="middle">5</text>
+<text x="504" y="30" class="sm" text-anchor="middle">6</text>
+<text x="580" y="30" class="sm" text-anchor="middle">7</text>
+<text x="656" y="30" class="sm" text-anchor="middle">8</text>
+<text x="732" y="30" class="sm" text-anchor="middle">9</text>
+<text x="808" y="30" class="sm" text-anchor="middle">10</text>
+<text x="884" y="30" class="sm" text-anchor="middle">11</text>
+<text x="960" y="30" class="sm" text-anchor="middle">12</text>
+<text x="100" y="70" class="head">A · UNA CADENA DEPENDIENTE<tspan dx="14" class="mono" style="letter-spacing:0">r = r * x</tspan></text>
+<text x="86" y="103" class="sm" text-anchor="end">mul 0</text>
+<rect x="100" y="84" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="124" y="104" class="mono inv" text-anchor="middle">r</text>
+<rect x="176" y="84" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="252" y="84" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="328" y="84" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="404" y="84" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="428" y="104" class="mono inv" text-anchor="middle">r</text>
+<rect x="480" y="84" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="556" y="84" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="632" y="84" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="708" y="84" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="732" y="104" class="mono inv" text-anchor="middle">r</text>
+<rect x="784" y="84" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="860" y="84" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="936" y="84" width="48" height="28" rx="1.5" fill="#efefef"/>
+<text x="86" y="143" class="sm" text-anchor="end">mul 1</text>
+<rect x="100" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="176" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="252" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="328" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="404" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="480" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="556" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="632" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="708" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="784" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="860" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="936" y="124" width="48" height="28" rx="1.5" fill="#efefef"/>
+<text x="1008" y="120" class="big">12,5 %</text>
+<text x="1008" y="142" class="sm">3/24 slots</text>
+<path d="M100,160 Q100,165 110,165 L242,165 Q252,165 252,170 Q252,165 262,165 L394,165 Q404,165 404,160" fill="none" stroke="#a00000" stroke-width="1.2"/>
+<text x="252" y="192" class="note" text-anchor="middle">latencia: 4 ciclos</text>
+<text x="100" y="244" class="head">B · SMT, DOS THREADS<tspan dx="14" class="mono" style="letter-spacing:0">t0, t1</tspan></text>
+<text x="86" y="277" class="sm" text-anchor="end">mul 0</text>
+<rect x="100" y="258" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="124" y="278" class="mono inv" text-anchor="middle">t0</text>
+<rect x="176" y="258" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="252" y="258" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="328" y="258" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="404" y="258" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="428" y="278" class="mono inv" text-anchor="middle">t0</text>
+<rect x="480" y="258" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="556" y="258" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="632" y="258" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="708" y="258" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="732" y="278" class="mono inv" text-anchor="middle">t0</text>
+<rect x="784" y="258" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="860" y="258" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="936" y="258" width="48" height="28" rx="1.5" fill="#efefef"/>
+<text x="86" y="317" class="sm" text-anchor="end">mul 1</text>
+<rect x="100" y="298" width="48" height="28" rx="1.5" fill="url(#rayado)" stroke="#737373" stroke-width="1"/>
+<rect x="110" y="303" width="28" height="18" fill="#fffff8"/>
+<text x="124" y="318" class="mono" text-anchor="middle">t1</text>
+<rect x="176" y="298" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="252" y="298" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="328" y="298" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="404" y="298" width="48" height="28" rx="1.5" fill="url(#rayado)" stroke="#737373" stroke-width="1"/>
+<rect x="414" y="303" width="28" height="18" fill="#fffff8"/>
+<text x="428" y="318" class="mono" text-anchor="middle">t1</text>
+<rect x="480" y="298" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="556" y="298" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="632" y="298" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="708" y="298" width="48" height="28" rx="1.5" fill="url(#rayado)" stroke="#737373" stroke-width="1"/>
+<rect x="718" y="303" width="28" height="18" fill="#fffff8"/>
+<text x="732" y="318" class="mono" text-anchor="middle">t1</text>
+<rect x="784" y="298" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="860" y="298" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="936" y="298" width="48" height="28" rx="1.5" fill="#efefef"/>
+<text x="1008" y="294" class="big">25 %</text>
+<text x="1008" y="316" class="sm">6/24 slots</text>
+<text x="100" y="380" class="head">C · CUATRO ACUMULADORES, UN THREAD<tspan dx="14" class="mono" style="letter-spacing:0">r0..r3</tspan></text>
+<text x="86" y="413" class="sm" text-anchor="end">mul 0</text>
+<rect x="100" y="394" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="124" y="414" class="mono inv" text-anchor="middle">r0</text>
+<rect x="176" y="394" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="200" y="414" class="mono inv" text-anchor="middle">r2</text>
+<rect x="252" y="394" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="328" y="394" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="404" y="394" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="428" y="414" class="mono inv" text-anchor="middle">r0</text>
+<rect x="480" y="394" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="504" y="414" class="mono inv" text-anchor="middle">r2</text>
+<rect x="556" y="394" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="632" y="394" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="708" y="394" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="732" y="414" class="mono inv" text-anchor="middle">r0</text>
+<rect x="784" y="394" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="808" y="414" class="mono inv" text-anchor="middle">r2</text>
+<rect x="860" y="394" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="936" y="394" width="48" height="28" rx="1.5" fill="#efefef"/>
+<text x="86" y="453" class="sm" text-anchor="end">mul 1</text>
+<rect x="100" y="434" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="124" y="454" class="mono inv" text-anchor="middle">r1</text>
+<rect x="176" y="434" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="200" y="454" class="mono inv" text-anchor="middle">r3</text>
+<rect x="252" y="434" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="328" y="434" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="404" y="434" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="428" y="454" class="mono inv" text-anchor="middle">r1</text>
+<rect x="480" y="434" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="504" y="454" class="mono inv" text-anchor="middle">r3</text>
+<rect x="556" y="434" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="632" y="434" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="708" y="434" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="732" y="454" class="mono inv" text-anchor="middle">r1</text>
+<rect x="784" y="434" width="48" height="28" rx="1.5" fill="#a00000"/>
+<text x="808" y="454" class="mono inv" text-anchor="middle">r3</text>
+<rect x="860" y="434" width="48" height="28" rx="1.5" fill="#efefef"/>
+<rect x="936" y="434" width="48" height="28" rx="1.5" fill="#efefef"/>
+<text x="1008" y="430" class="big">50 %</text>
+<text x="1008" y="452" class="sm">12/24 slots</text>
+<text x="100" y="498" class="note">con 8 cadenas (latencia × unidades) se llenan todos</text>
+</svg>
