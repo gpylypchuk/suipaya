@@ -4,7 +4,7 @@ Parámetros: docs (site.clases, site.assignments o site.notas) y etiqueta ("Clas
 Opcional para notas: campo ("proyecto"). Por defecto "curso".
 {%- endcomment -%}
 {% assign campo = include.campo | default: "curso" %}
-{% assign hermanos = include.docs | where: campo, page[campo] | sort: "numero", "last" %}
+{% assign hermanos = include.docs | where: campo, page[campo] | where_exp: "h", "h.nota != true" | sort: "numero", "last" %}
 {% for h in hermanos %}{% if h.url == page.url %}{% assign actual = forloop.index0 %}{% endif %}{% endfor %}
 {% assign anterior = nil %}
 {% if actual > 0 %}{% assign i = actual | minus: 1 %}{% assign anterior = hermanos[i] %}{% endif %}

@@ -12,10 +12,19 @@ layout: default
 
 {{ content }}
 
-{% assign clases = site.clases | where: "curso", page.slug %}
+{% assign del_curso = site.clases | where: "curso", page.slug %}
+{% assign clases = del_curso | where_exp: "c", "c.nota != true" %}
+{% assign notas = del_curso | where_exp: "c", "c.nota == true" %}
 {% if clases.size > 0 %}
 <h2>Clases</h2>
 {% include lista-curso.html docs=clases etiqueta="Clase" %}
+{% endif %}
+
+{% if notas.size > 0 %}
+<h2>Notas</h2>
+<ul class="lista-items">
+  {% for n in notas %}<li><a href="{{ n.url | prepend: site.baseurl }}">{{ n.title }}</a></li>{% endfor %}
+</ul>
 {% endif %}
 
 {% assign assignments = site.assignments | where: "curso", page.slug %}

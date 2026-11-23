@@ -1,10 +1,7 @@
 ---
 curso: cs149
-numero: 2
+nota: true
 title: Cómo ejecuta instrucciones un núcleo moderno
-resumen: Superescalar, ILP, latencia, out-of-order, hyperthreading y el pico teórico de un procesador.
-slides:
-video:
 ---
 
 ## El núcleo

@@ -1,9 +1,15 @@
 ---
 layout: default
 ---
+{% if page.nota %}
+{% include cabecera-entrada.html %}
+
+{{ content }}
+{% else %}
 {% capture links %}Slides|{{ page.slides }};Video|{{ page.video }}{% endcapture %}
 {% include cabecera-entrada.html etiqueta="Clase" links=links %}
 
 {{ content }}
 
 {% include navegacion-entrada.html docs=site.clases etiqueta="Clase" %}
+{% endif %}

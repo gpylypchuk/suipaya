@@ -9,7 +9,7 @@ Opcionales para notas: padres (site.proyectos) y campo ("proyecto"). Por defecto
 {% if padre %}
 <p class="volver sans"><a href="{{ padre.url | prepend: site.baseurl }}">&larr; {{ padre.title }}</a></p>
 {% endif %}
-<p class="etiqueta">{{ include.etiqueta }} {{ page.numero }}</p>
+{% if include.etiqueta %}<p class="etiqueta">{{ include.etiqueta }} {{ page.numero }}</p>{% endif %}
 <h1 class="titulo-entrada">{{ page.title }}</h1>
 {% assign links = include.links | split: ";" %}
 {% capture enlaces %}{% for par in links %}{% assign partes = par | split: "|" %}{% if partes[1] and partes[1] != "" %}<a href="{{ partes[1] }}">{{ partes[0] }}</a>{% endif %}{% endfor %}{% endcapture %}
