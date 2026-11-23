@@ -24,7 +24,8 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Fijo en 24.04: en ubuntu-latest (26.04) setup-ruby no tiene Ruby 3.2.2 precompilado
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
